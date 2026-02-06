@@ -4,27 +4,40 @@ class Router {
     this.routes = {
       '/': 'views/home.html',
       '/join': 'views/join.html',
+      '/contact': 'views/contact.html',
     };
     
+    this.handleClick = this.handleClick.bind(this);
+    this.handlePopState = this.handlePopState.bind(this);
+    this.initialized = false;
+
     this.init();
   }
 
   init() {
+    if (this.initialized) return;
+
     // Handle navigation link clicks
-    document.addEventListener('click', (e) => {
-      const link = e.target.closest('a[href^="/"]');
-      if (link && !link.target) {
-        e.preventDefault();
-        this.navigate(link.href);
-      }
-    });
+    document.addEventListener('click', this.handleClick);
 
     // Handle back/forward buttons
-    window.addEventListener('popstate', () => {
-      this.loadPage(window.location.pathname);
-    });
+    window.addEventListener('popstate', this.handlePopState);
+
+    this.initialized = true;
 
     // Load initial page
+    this.loadPage(window.location.pathname);
+  }
+
+  handleClick(e) {
+    const link = e.target.closest('a[href^="/"]');
+    if (link && !link.target) {
+      e.preventDefault();
+      this.navigate(link.href);
+    }
+  }
+
+  handlePopState() {
     this.loadPage(window.location.pathname);
   }
 
@@ -58,8 +71,6 @@ class Router {
         // Scroll to top
         window.scrollTo(0, 0);
         
-        // Re-initialize router for new links
-        this.init();
       }
     } catch (error) {
       console.error('Error loading page:', error);
