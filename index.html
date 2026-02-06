@@ -7,51 +7,37 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div id="header-component"></div>
   <div id="app">
-    <!-- Sticky Bar Notification Component -->
-    <div class="sticky-bar">
-      <p class="sticky-bar__text">
-        <strong><u><a href="#apply">Applications are open</a></u></strong>
-      </p>
-    </div>
-
-    <!-- Header/Navigation Component -->
-    <header class="block-header">
-      <div class="block-header-layout-desktop">
-        <a href="/" class="block-header-logo">
-          <img src="assets/IMG_4521.jpg" alt="Cornell Cybersecurity Club logo">
-        </a>
-        <nav class="block-header__nav">
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/join">Join</a></li>
-            <li><a href="/people">People</a></li>
-            <li><a href="/contact">Contact</a></li>
-            <li><a href="/ctf">CTF</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+    <!-- Sticky Bar (Loaded dynamically) -->
+    <div id="sticky-bar-component"></div>
 
     <!-- Hero Section -->
-    <section id="hero" class="block">
-      <div class="block-background">
+    <section id="hero" class="hero">
+      <div class="hero-background">
         <img src="assets/IMG_0332.jpg" alt="Cornell Cybersecurity Club members">
-        <div class="block-background__overlay"></div>
+        <div class="hero-overlay"></div>
       </div>
-      <div class="block-layout">
+      <div class="hero-content">
         <h1>Cornell Cybersecurity Club</h1>
-        <p>Master cybersecurity skills and compete in CTFs with Cornell's premier security & hacking club.</p>
+        <h2>Become a CyBear today!</h2>
+        <p class="hero-sub">Master cybersecurity skills and compete in CTFs with Cornell's premier security &amp; hacking club.</p>
       </div>
     </section>
 
     <!-- New Member Intake Section -->
-    <section id="join" class="block">
-      <div class="block-background"></div>
-      <div class="block-layout">
-        <h3>New Member Intake</h3>
-        <p>We are Cornell University's only student organization for cybersecurity...</p>
-        <button class="grid-button grid-button--primary">Join Cornell Cyber</button>
+    <section id="join" class="intro">
+      <div class="container grid-intro">
+        <div class="intro-text">
+          <h3>New Member Intake</h3>
+          <p>We are Cornell University's only student organization for cybersecurity, offering an exhaustive cybersecurity curriculum for both novice and hardened individuals. Topics range from binary exploitation to cryptography, reverse engineering, and more.</p>
+          <a class="btn-primary" href="/join">Join Cyber Security</a>
+          <p class="intro-note"><strong>All Cornellians are welcome to join.</strong><br>Everyone at Cornell is welcome to become a CyBear, regardless of their skill level or major. Although no prior experience is necessary to join the club, it may be beneficial during onboarding!</p>
+          <p class="muted">Spring 2026 Recruitment has concluded.</p>
+        </div>
+        <div class="intro-image">
+          <img src="assets/IMG_0340.jpg" alt="black blue and yellow textile" class="rounded-image"/>
+        </div>
       </div>
     </section>
 
@@ -69,68 +55,100 @@
     </section>
 
     <!-- CTF Section -->
-    <section id="ctf" class="block">
-      <h2>What's a CTF?</h2>
-      <p>In cybersecurity, Capture the Flag (CTF) competitions...</p>
+    <section id="ctf" class="what-ctf">
+      <div class="what-ctf-card">
+        <h3>What's a CTF?</h3>
+        <p class="citation">"In cybersecurity, Capture the Flag (CTF) competitions are exercises in which participants, either individually or as part of a team, are challenged to find and exploit vulnerabilities in a system to capture a 'flag' or piece of information" (Filipkowski, 2024, p. 3).</p>
+      </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="block">
-      <h3>Leading Cornell in Cybersecurity</h3>
-      <div class="features">
-        <div class="feature">
-          <img src="assets/IMG_1753.jpg" alt="CTF Competition" class="feature-image">
-          <h6>Competing in CTFs</h6>
-          <p>One of our greatest purposes is to compete in global hacking competitions...</p>
-        </div>
-        <div class="feature">
-          <img src="assets/IMG_1754.jpg" alt="Workshop" class="feature-image">
-          <h6>New Skills Every Week</h6>
-          <p>We host weekly technical workshops...</p>
-        </div>
-        <div class="feature">
-          <img src="assets/IMG_1755.jpg" alt="Guest Speaker" class="feature-image">
-          <h6>Guest Speaker Events</h6>
-          <p>We hold various cybersecurity speaker events each semester...</p>
+    <section id="about" class="lead">
+      <div class="container">
+        <h3>Leading Cornell in Cybersecurity</h3>
+        <p class="sub">We are Cornell's haven for ethical hacking enthusiasts.</p>
+        <div class="lead-grid">
+          <div class="lead-image">
+            <img src="assets/IMG_1753.jpg" alt="Members working" class="rounded-image">
+          </div>
+          <div class="lead-features">
+            <div class="lead-feature">
+              <h4 class="lead-title">Competing in CTFs</h4>
+              <p>One of our greatest purposes is to compete in global hacking competitions known as CTFs. Members compete in practice competitions and real events.</p>
+            </div>
+            <div class="lead-feature">
+              <h4 class="lead-title">New Skills Every Week</h4>
+              <p>We host weekly technical workshops for our members to learn new skills and put their knowledge to the test.</p>
+            </div>
+            <div class="lead-feature">
+              <h4 class="lead-title">Guest Speaker Events</h4>
+              <p>We hold various cybersecurity speaker events each semester with Cornell alumni, field experts, industry professionals, and tech innovators.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Events Section -->
-    <section id="events" class="block">
-      <h3>Featured Events</h3>
-      <div class="event-cards">
-        <div class="event-card">
-          <img src="assets/IMG_1757.jpg" alt="ISTS 2025 Event">
-          <h5>ISTS 2025</h5>
-          <p>Competed at RITSEC's prestigious ISTS cybersecurity competition.</p>
+    <section id="events" class="events">
+      <div class="container">
+        <h3>Featured Events</h3>
+        <div class="event-cards">
+          <div class="event-card">
+            <img src="assets/IMG_1757.jpg" alt="ISTS 2025 Event">
+            <h5>ISTS 2025</h5>
+            <p>Members recently competed at RITSEC's prestigious ISTS cybersecurity competition—Cornell's first appearance at an event of this caliber. Although we faced malware-laden Windows services and lost our minds over DNS issues, the all-underclassmen team gained invaluable hands-on experience defending and managing complex infrastructure under real-time pressure.</p>
+          </div>
+          <div class="event-card">
+            <img src="assets/IMG_4522.jpg" alt="NYC Meetup">
+            <h5>NYC Collegiate Security Meetup 2025</h5>
+            <p>Cornell Cyber traveled to Columbia University for the NYC Collegiate Security Meetup, where they connected with peers from NYU, Queens College, and John Jay. The event featured focused discussions on the cybersecurity industry and technical topics, strengthening ties within the growing New York student-security community. We're glad Cornell could make it!</p>
+          </div>
         </div>
-        <div class="event-card">
-          <img src="assets/IMG_4522.jpg" alt="NYC Meetup">
-          <h5>NYC Collegiate Security Meetup 2025</h5>
-          <p>Connected with peers from NYU, Queens College, and John Jay.</p>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+      <div class="container">
+        <h3>Cybersecurity Enthusiasts</h3>
+        <p>Explore a gallery from prior events.</p>
+        <div class="gallery-grid">
+          <figure>
+            <img src="assets/IMG_1757.jpg" alt="member at picoCTF"/>
+            <figcaption>A member works on a PicoCTF challenge problem.</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/IMG_4522.jpg" alt="assisting a member"/>
+            <figcaption>Will Rosenthal assisting a new member with a PicoCTF challenge problem.</figcaption>
+          </figure>
         </div>
       </div>
     </section>
 
     <!-- Footer Component -->
-    <footer class="block block--footer">
-      <div class="footer-content">
-        <h5>Connect</h5>
-        <div class="social-icons">
-          <a href="https://discord.com/invite/jrjnwWK">Discord</a>
-          <a href="https://www.instagram.com/cornellcyber/">Instagram</a>
-          <a href="https://www.linkedin.com/company/cornell-cybersecurity-club/">LinkedIn</a>
+    <footer class="block block--footer site-footer">
+      <div class="footer-inner container">
+        <div class="footer-left">
+          <h4>Connect</h4>
+          <p>Stay connected with the latest Cornell Cybersecurity Club news and events.</p>
+          <div class="footer-actions">
+            <button class="btn-primary">Join</button>
+            <button class="btn-secondary">More</button>
+          </div>
         </div>
-        <form class="footer-form">
-          <input type="email" placeholder="Enter your email address" required>
-          <button type="submit">Become a CyBear today!</button>
-        </form>
-        <div class="footer-bottom">
-          <p>© 2025. All rights reserved.</p>
-          <p><strong>This organization is a registered student organization of Cornell University.</strong></p>
-          <a href="https://hr.cornell.edu/about/workplace-rights/equal-education-and-employment" target="_blank">Equal Education and Employment</a>
+        <div class="footer-right">
+          <h4>New Member Intake</h4>
+          <p>Want to join our mailing list? Enter your email address here</p>
+          <form class="subscribe">
+            <input type="email" placeholder="Email address" aria-label="Email address">
+            <button type="submit" class="btn-primary">Join</button>
+          </form>
         </div>
+      </div>
+      <div class="legal">
+        <p>Become a CyBear today!</p>
+        <p>© 2025. All rights reserved.<br>This organization is a registered student organization of Cornell University.<br>Equal Education and Employment</p>
       </div>
     </footer>
   </div>

@@ -8,50 +8,36 @@
 </head>
 <body>
   <div id="app">
-    <!-- Sticky Bar Notification Component -->
-    <div class="sticky-bar">
-      <p class="sticky-bar__text">
-        <strong><u><a href="#apply">Applications are open</a></u></strong>
-      </p>
-    </div>
+    <!-- Sticky bar moved to top-level component -->
 
-    <!-- Header/Navigation Component -->
-    <header class="block-header">
-      <div class="block-header-layout-desktop">
-        <a href="/" class="block-header-logo">
-          <img src="assets/IMG_4521.jpg" alt="Cornell Cybersecurity Club logo">
-        </a>
-        <nav class="block-header__nav">
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/join">Join</a></li>
-            <li><a href="/people">People</a></li>
-            <li><a href="/contact">Contact</a></li>
-            <li><a href="/ctf">CTF</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+    <!-- Header removed (now loaded as component) -->
 
     <!-- Hero Section -->
-    <section id="hero" class="block">
-      <div class="block-background">
+    <section id="hero" class="hero">
+      <div class="hero-background">
         <img src="assets/IMG_0332.jpg" alt="Cornell Cybersecurity Club members">
-        <div class="block-background__overlay"></div>
+        <div class="hero-overlay"></div>
       </div>
-      <div class="block-layout">
+      <div class="block-layout hero-content">
         <h1>Cornell Cybersecurity Club</h1>
-        <p>Master cybersecurity skills and compete in CTFs with Cornell's premier security & hacking club.</p>
+        <p class="hero-sub">Become a CyBear today!
+Master cybersecurity skills and compete in CTFs with Cornell's premier security &amp; hacking club.</p>
       </div>
     </section>
 
     <!-- New Member Intake Section -->
-    <section id="join" class="block">
-      <div class="block-background"></div>
-      <div class="block-layout">
-        <h3>New Member Intake</h3>
-        <p>We are Cornell University's only student organization for cybersecurity...</p>
-        <a href="/join" class="grid-button grid-button--primary">Join Cornell Cyber</a>
+    <section id="join" class="intro">
+      <div class="container grid-intro">
+        <div class="intro-text">
+          <h3>New Member Intake</h3>
+          <p>We are Cornell University's only student organization for cybersecurity, offering an exhaustive cybersecurity curriculum for both novice and hardened individuals. Topics range from binary exploitation to cryptography, reverse engineering, and more.</p>
+          <a class="btn-primary" href="/join">Join Cyber Security</a>
+          <p class="intro-note"><strong>All Cornellians are welcome to join.</strong><br>Everyone at Cornell is welcome to become a CyBear, regardless of their skill level or major. Although no prior experience is necessary to join the club, it may be beneficial during onboarding!</p>
+          <p class="muted">Spring 2026 Recruitment has concluded.</p>
+        </div>
+        <div class="intro-image">
+          <img src="assets/IMG_0340.jpg" alt="black blue and yellow textile" class="rounded-image"/>
+        </div>
       </div>
     </section>
 
